@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Acervo de la Plaza de Paloquemado</title>
+</head>
+<body>
+    <header>
+      <h1>Palo y Quemado</h1>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/cultura.html">Nuestra cultura</a></li>
+          <li><a href="#calendario">Calendario de temporada</a></li>
+          <li><a href="#frutas">Frutas de temporada</a></li>
+          <li><a href="#preguntas">Preguntas frecuentes</a></li>
+          <li><a href="/contacto.html">Contáctanos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+          <!-- uso de formulario -->
+      <section id="contacto">
+        <h2>Compartenos parte de tu relacion con la Plaza</h2>
+
+        <ol>
+          <li>Completa el formulario con tu historia o receta.</li>
+        </ol>
+
+        <form>
+          <fieldset>
+            <legend>Comparte tu historia para el acervo</legend>
+
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              minlength="3"
+            />
+
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" required />
+
+            <label for="fecha-recuerdo">Fecha aproximada del recuerdo</label>
+            <input type="date" id="fecha-recuerdo" name="fecha-recuerdo" />
+
+            <label for="tipo-aporte">Tipo de aporte</label>
+            <select id="tipo-aporte" name="tipo-aporte">
+              <option value="historia">Historia o anécdota</option>
+              <option value="receta">Receta familiar</option>
+              <option value="foto">Foto</option>
+            </select>
+
+            <label for="mensaje">Cuéntanos tu historia</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              maxlength="500"
+              required
+            ></textarea>
+
+            <button type="submit">Enviar aporte</button>
+          </fieldset>
+        </form>
+      </section>
+
+<footer>
+<a href="https://github.com/AlejoRjas/">Contacto (github)</a>
+<p>&copy; 2026 Palo y Quemado. Todos los derechos reservados.</p>
+</footer>
+
+
+</body>
+</html>
