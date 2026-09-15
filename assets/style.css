@@ -1,5 +1,16 @@
+
+h2{
+color : rgb(223, 223, 230);
+background-color: #000000; 
+}
+
+h1{
+color : rgb(207, 214, 207);
+background-color: #6d0808; 
+}
+
 p{
-    color : #000000;
+    color : aquamarine;
 }
 
 body {
