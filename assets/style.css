@@ -1,19 +1,26 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #6d0808;
+}
 
 h2{
-color : rgb(223, 223, 230);
-background-color: #000000; 
+  color : rgb(0, 0, 0);
 }
 
 h1{
-color : rgb(207, 214, 207);
-background-color: #6d0808; 
+  color : rgb(20, 20, 20);
 }
 
 p{
-    color : aquamarine;
+  color : rgb(5, 5, 5);
 }
 
 body {
   background-color: #eeead7; 
 }
 
+footer {
+  background-color: #757d6f;
+}
