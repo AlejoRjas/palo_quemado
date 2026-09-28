@@ -1,77 +1,181 @@
-<!-- Archivo principal llamado index.html -->
-
-<!-- Se declara HTML5  -->
 <!doctype html>
-<!--El lenguaje para la indexación es "es" en la etiqueta -->
 <html lang="es">
-
   <head>
-    <!-- 3.1 Documento y <head>: aparece repesentado en buscadores -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Palo y Quemado - Acervo de la Plaza de Paloquemado</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Palo y Quemado, verdulería en Bogotá</title>
+    <meta name="description" content="Palo y Quemado es una verdulería de barrio en Bogotá: fruta, verdura y hierbas frescas compradas cada madrugada en la Plaza de Paloquemao, con precios justos y domicilios en el sector.">
+    <meta name="author" content="Alejandro Rojas">
 
-    <!-- CSS-->
-    <link rel="stylesheet" href="assets/style.css" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Palo y Quemado, verdulería en Bogotá">
+    <meta property="og:description" content="Fruta y verdura fresca de Paloquemao, con precios justos y domicilios. Haz tu pedido en línea.">
+    <meta property="og:url" content="https://alejorjas.github.io/palo_quemado/">
+    <meta property="og:site_name" content="Palo y Quemado">
+    <meta property="og:image" content="https://alejorjas.github.io/palo_quemado/images/og_image_palo_quemado.jpg">
+    <meta property="og:image:width" content="1424">
+    <meta property="og:image:height" content="752">
+    <meta property="og:image:alt" content="Personas comprando frutas en los estantes de la Plaza de Paloquemao, Bogotá">
+    <meta property="og:locale" content="es_CO">
 
-    <meta
-      name="description"
-      content="Acervo de los productos comercializados en la Plaza de Paloquemado en Bogotá. Es nuestra cultura Rola que se sirve en el desayuno, corrientazo y antojo nocturno"
-    />
-    <meta name="author" content="Alejandro Rojas" />
-
-    <!-- Bloque Open Graph completo-->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Palo y Quemado - Acervo de la Plaza de Paloquemado"/>
-    <meta property="og:description" content="¿Curiosidad por saber de nuestro sabor Rolo? haz click aqui para entrar al Acervo"/>
-    <meta property="og:url" content="https://alejorjas.github.io/palo_quemado/"/>
-    <meta property="og:site_name" content="Palo y Quemado"/>
-    <meta property="og:image" content="https://alejorjas.github.io/palo_quemado/img/og_image_palo_quemado.jpg"/>
-    <meta property="og:image:width" content="1200"/>
-    <meta property="og:image:height" content="630"/>
-    <meta property="og:image:alt" content="Personas comprando frutas de los estantes en la plaza de Paloquemado, Bogotá"/>
-    <meta property="og:locale" content="es_CO"/>
-    <!-- Favicon con <link rel="icon"> -->
-    <link rel="icon" type="image/x-icon" href="img/favicon_palo_quemado.ico"/>
+    <link rel="icon" type="image/x-icon" href="images/favicon_palo_quemado.ico">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
 
   <body>
-    <header>
-      <h1>Palo y Quemado</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="pages/cultura.html">Nuestra cultura</a></li>
-          <li><a href="pages/frutas.html">Frutas de temporada</a></li>
-          <li><a href="pages/preguntas.html">Preguntas frecuentes</a></li>
-        </ul>
-      </nav>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html">Palo y Quemado</a>
+        <nav class="nav" aria-label="Menú principal">
+          <ul class="nav__list">
+            <li><a class="nav__link nav__link--active" href="index.html" aria-current="page">Inicio</a></li>
+            <li><a class="nav__link" href="pages/nosotros.html">Nosotros</a></li>
+            <li><a class="nav__link" href="pages/servicios.html">Productos</a></li>
+            <li><a class="nav__link" href="pages/contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <!-- sección de inicio-->
-      <section id="inicio">
-        <h2>¡Bienvenido a Palo y Quemado!</h2>
-        <p>
-          Un acervo dedicado a los productos, sabores y tradiciones al rededor
-          de la Plaza de Paloquemado.
-        </p>
-        <figure>
-          <img
-            src="img/plaza.jpg"
-            alt="vista de la plaza de Paloquemado"
-            width="400"
-            height="300"
-          />
-          <figcaption>Patrimonio de todos los Bogotanos.</figcaption>
+    <main id="contenido">
+      <section class="hero">
+        <div class="hero__content">
+          <h1>Palo y Quemado</h1>
+          <p class="hero__lead">
+            Verdulería de barrio con fruta, verdura y hierbas frescas. Compramos cada madrugada en la
+            Plaza de Paloquemao y te lo llevamos a la puerta de tu casa el mismo día.
+          </p>
+          <div class="button-group">
+            <a class="button" href="pages/contacto.html">Hacer un pedido</a>
+            <a class="button button--secondary" href="pages/servicios.html">Ver precios</a>
+          </div>
+          <figure class="testimonial testimonial--hero">
+            <blockquote>
+              <p>
+                Desde que les compro, la fruta me dura toda la semana y el domicilio llega a la hora
+                que pido. Ya no tengo que madrugar a la plaza.
+              </p>
+            </blockquote>
+            <figcaption>Martha Lucía R., clienta desde <time datetime="2019">2019</time></figcaption>
+          </figure>
+        </div>
+        <figure class="hero__media">
+          <img src="images/plaza.jpg" alt="Puestos de fruta en la Plaza de Paloquemao con clientes comprando" width="704" height="384">
+          <figcaption>Cada madrugada escogemos el producto en la Plaza de Paloquemao.</figcaption>
         </figure>
+      </section>
+
+      <section class="section">
+        <h2>¿Por qué comprar con nosotros?</h2>
+        <div class="cards">
+          <article class="card">
+            <h3 class="card__title">Fresco cada madrugada</h3>
+            <p>
+              Llegamos a la plaza a las <time datetime="04:00">4:00 a. m.</time> y escogemos a mano cada
+              caja. Lo que no se vende en dos días se dona a comedores comunitarios del barrio.
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Precios justos y a la vista</h3>
+            <p>
+              Publicamos cada lunes la lista de precios de la semana en
+              <abbr title="pesos colombianos">COP</abbr>. Pagas lo que ves, sin recargos por pagar con
+              Nequi, Daviplata o tarjeta.
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Domicilios en el sector</h3>
+            <p>
+              Llevamos tu mercado a Los Mártires, Teusaquillo y Puente Aranda. El domicilio es gratis en
+              pedidos desde $60.000.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Destacados de la semana</h2>
+        <p>
+          Estas son las frutas que están en su mejor punto esta semana, del
+          <time datetime="2026-09-28">28 de septiembre</time> al
+          <time datetime="2026-10-04">4 de octubre de 2026</time>.
+        </p>
+        <div class="gallery">
+          <figure class="gallery__item">
+            <img src="images/uchuvas.jpg" alt="Canasta de uchuvas frescas con su cáscara abierta" width="704" height="384">
+            <figcaption>Uchuva de Boyacá: canastilla de 250 g a $4.500.</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/mangos.jpg" alt="Canasta de mangos maduros" width="704" height="384">
+            <figcaption>Mango Tommy del Tolima: $7.200 el kilo.</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/granadilla.jpg" alt="Granadilla entera junto a otra abierta por la mitad con sus semillas" width="640" height="480">
+            <figcaption>
+              Granadilla del Huila: $9.500 el kilo.
+              <small class="credit">Foto: Ivar Leidus, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></small>
+            </figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/maracuya.jpg" alt="Maracuyá partido en dos mitades con la pulpa amarilla a la vista" width="640" height="480">
+            <figcaption>
+              Maracuyá para jugo: $6.800 el kilo.
+              <small class="credit">Foto: Filo gèn', <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></small>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Conoce más de Palo y Quemado</h2>
+        <div class="cards">
+          <article class="card">
+            <h3 class="card__title">Nosotros</h3>
+            <p>Una familia que lleva más de diez años surtiendo las cocinas del barrio.</p>
+            <a class="card__link" href="pages/nosotros.html">Conoce nuestra historia</a>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Productos y precios</h3>
+            <p>Frutas, verduras, tubérculos, hierbas y canastas armadas, con la lista de precios de la semana.</p>
+            <a class="card__link" href="pages/servicios.html">Ver productos</a>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Pedidos y contacto</h3>
+            <p>Reserva tu pedido para recoger en tienda o recibir a domicilio.</p>
+            <a class="card__link" href="pages/contacto.html">Hacer un pedido</a>
+          </article>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <a href="https://github.com/AlejoRjas/">Contacto (github)</a>
-      <p>&copy; 2026 Palo y Quemado. Todos los derechos reservados.</p>
+    <footer class="site-footer">
+      <div class="site-footer__grid">
+        <div class="site-footer__col">
+          <h2 class="site-footer__title">Palo y Quemado</h2>
+          <p>Verdulería de barrio con fruta y verdura fresca de la Plaza de Paloquemao desde <time datetime="2014">2014</time>.</p>
+        </div>
+        <div class="site-footer__col">
+          <h2 class="site-footer__title">Contacto</h2>
+          <address>
+            Calle 19 # 26-40, local 2, Bogotá<br>
+            Teléfono: <a href="tel:+576015550123">601 555 0123</a><br>
+            Correo: <a href="mailto:pedidos@paloyquemado.co">pedidos@paloyquemado.co</a>
+          </address>
+        </div>
+        <div class="site-footer__col">
+          <h2 class="site-footer__title">Horario</h2>
+          <ul class="site-footer__list">
+            <li>Lunes a sábado: <time datetime="06:00">6:00 a. m.</time> a <time datetime="18:00">6:00 p. m.</time></li>
+            <li>Domingos y festivos: <time datetime="06:00">6:00 a. m.</time> a <time datetime="14:00">2:00 p. m.</time></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; <time datetime="2026">2026</time> Palo y Quemado. Todos los derechos reservados.</p>
+        <a href="https://github.com/AlejoRjas/">GitHub del autor</a>
+      </div>
     </footer>
-    
   </body>
 </html>
