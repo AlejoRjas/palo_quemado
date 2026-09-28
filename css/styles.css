@@ -368,7 +368,7 @@ main {
 .button {
   display: inline-block;
   padding: calc(var(--esp-xs) * 1.5) var(--esp-m);
-  border: 2px solid var(--color-primario);
+  border: 2px solid transparent;
   border-radius: var(--radio);
   background-color: var(--color-primario);
   color: var(--color-claro);
@@ -379,12 +379,12 @@ main {
 
 .button:hover,
 .button:focus {
-  border-color: var(--color-primario-oscuro);
   background-color: var(--color-primario-oscuro);
   color: var(--color-claro);
 }
 
 .button--secondary {
+  border-color: var(--color-primario);
   background-color: transparent;
   color: var(--color-primario);
 }
