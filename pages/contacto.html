@@ -4,227 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedidos y contacto | Palo y Quemado, verdulería en Bogotá</title>
-    <meta name="description" content="Haz tu pedido o reserva en Palo y Quemado para recoger en tienda o recibir a domicilio. Dirección, horarios, datos de contacto y preguntas frecuentes.">
+    <meta name="description" content="Haz tu pedido en Palo y Quemado para recoger en la tienda o recibir a domicilio. Encuentra nuestra dirección, horario, teléfono y las preguntas más frecuentes.">
     <meta name="author" content="Alejandro Rojas">
     <link rel="icon" type="image/x-icon" href="../images/favicon_palo_quemado.ico">
     <link rel="stylesheet" href="../css/styles.css">
   </head>
 
   <body>
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
-
-    <header class="site-header">
-      <div class="site-header__inner">
-        <a class="logo" href="../index.html">Palo y Quemado</a>
-        <nav class="nav" aria-label="Menú principal">
-          <ul class="nav__list">
-            <li><a class="nav__link" href="../index.html">Inicio</a></li>
-            <li><a class="nav__link" href="nosotros.html">Nosotros</a></li>
-            <li><a class="nav__link" href="servicios.html">Productos</a></li>
-            <li><a class="nav__link nav__link--active" href="contacto.html" aria-current="page">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
+    <header>
+      <a class="logo" href="../index.html">Palo y Quemado</a>
+      <nav>
+        <ul class="menu">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Productos</a></li>
+          <li><a class="activo" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main id="contenido">
-      <section class="page-intro">
-        <h1>Pedidos y contacto</h1>
-        <p class="page-intro__lead">
-          Reserva tu mercado para recogerlo en la tienda o recibirlo en casa. Te llamamos para confirmar
-          el valor y la hora antes de despacharlo.
-        </p>
-      </section>
+    <main>
+      <h1>Pedidos y contacto</h1>
 
-      <div class="contact-layout">
-        <section class="section">
-          <h2>Haz tu pedido o reserva</h2>
-          <ol class="steps">
-            <li>Escribe tus datos y la lista de productos con las cantidades.</li>
-            <li>Elige si lo recoges en la tienda o lo recibes a domicilio, y en qué fecha.</li>
-            <li>Te llamamos para confirmar el valor total y la hora de entrega.</li>
+      <div class="dos-columnas">
+        <!-- ============ Sección: Pedido ============ -->
+        <section>
+          <h2>Haz tu pedido</h2>
+          <ol>
+            <li>Escribe tus datos y los productos que necesitas.</li>
+            <li>Elige si lo recoges en la tienda o lo recibes en casa.</li>
+            <li>Te llamamos para confirmar el valor y la hora.</li>
           </ol>
 
-          <form class="form">
-            <fieldset class="form__group">
+          <form>
+            <fieldset>
               <legend>Tus datos</legend>
-
-              <div class="form__field">
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" autocomplete="name" required minlength="3">
+              <div class="campo">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required minlength="3">
               </div>
-
-              <div class="form__field">
-                <label for="telefono">Teléfono celular</label>
-                <input type="tel" id="telefono" name="telefono" autocomplete="tel" required pattern="[0-9]{10}" aria-describedby="telefono-ayuda">
-                <p class="form__hint" id="telefono-ayuda">10 dígitos, sin espacios. Por aquí te confirmamos el pedido.</p>
+              <div class="campo">
+                <label for="telefono">Teléfono (10 dígitos)</label>
+                <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{10}">
               </div>
-
-              <div class="form__field">
-                <label for="correo">Correo electrónico (opcional)</label>
-                <input type="email" id="correo" name="correo" autocomplete="email">
+              <div class="campo">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo">
               </div>
             </fieldset>
 
-            <fieldset class="form__group">
+            <fieldset>
               <legend>Tu pedido</legend>
-
-              <fieldset class="form__options">
-                <legend>¿Cómo quieres recibirlo?</legend>
-                <div class="form__option">
-                  <input type="radio" id="entrega-tienda" name="entrega" value="tienda" checked>
-                  <label for="entrega-tienda">Recoger en la tienda</label>
-                </div>
-                <div class="form__option">
-                  <input type="radio" id="entrega-domicilio" name="entrega" value="domicilio">
-                  <label for="entrega-domicilio">Domicilio ($6.000, gratis desde $60.000)</label>
-                </div>
-              </fieldset>
-
-              <div class="form__field">
-                <label for="direccion">Dirección de entrega</label>
-                <input type="text" id="direccion" name="direccion" autocomplete="address-line1" aria-describedby="direccion-ayuda">
-                <p class="form__hint" id="direccion-ayuda">Solo si pides domicilio. Incluye barrio, torre y apartamento.</p>
+              <div class="campo">
+                <label for="entrega">Entrega</label>
+                <select id="entrega" name="entrega">
+                  <option value="tienda">Recoger en la tienda</option>
+                  <option value="domicilio">Domicilio</option>
+                </select>
               </div>
-
-              <div class="form__field">
-                <label for="fecha">Fecha de entrega o recogida</label>
+              <div class="campo">
+                <label for="fecha">Fecha</label>
                 <input type="date" id="fecha" name="fecha" required>
               </div>
-
-              <div class="form__field">
-                <label for="franja">Franja horaria</label>
-                <select id="franja" name="franja" required>
-                  <option value="">Elige una franja</option>
-                  <option value="manana">Mañana (8:00 a. m. a 12:00 m.)</option>
-                  <option value="tarde">Tarde (12:00 m. a 4:00 p. m.)</option>
-                </select>
-              </div>
-
-              <div class="form__field">
+              <div class="campo">
                 <label for="productos">Productos y cantidades</label>
-                <textarea id="productos" name="productos" rows="6" maxlength="800" required aria-describedby="productos-ayuda"></textarea>
-                <p class="form__hint" id="productos-ayuda">Por ejemplo: 2 kilos de papa pastusa, 1 libra de mora, 1 atado de cilantro.</p>
-              </div>
-
-              <div class="form__field">
-                <label for="pago">Medio de pago</label>
-                <select id="pago" name="pago">
-                  <option value="efectivo">Efectivo</option>
-                  <option value="nequi">Nequi</option>
-                  <option value="daviplata">Daviplata</option>
-                  <option value="tarjeta">Tarjeta débito o crédito (datáfono)</option>
-                </select>
-              </div>
-
-              <div class="form__option">
-                <input type="checkbox" id="acepto" name="acepto" required>
-                <label for="acepto">Acepto que me llamen para confirmar el pedido.</label>
+                <textarea id="productos" name="productos" rows="5" maxlength="500" required></textarea>
               </div>
             </fieldset>
 
-            <div class="button-group">
-              <button class="button" type="submit">Enviar pedido</button>
-              <button class="button button--secondary" type="reset">Borrar formulario</button>
-            </div>
+            <button class="boton" type="submit">Enviar pedido</button>
           </form>
         </section>
 
-        <section class="section contact-info">
-          <h2>Visítanos</h2>
-          <address>
-            Calle 19 # 26-40, local 2<br>
-            Barrio Paloquemao, Bogotá
-          </address>
-          <p>A una cuadra de la Plaza de Paloquemao. Hay parqueo para bicicletas frente al local.</p>
-
-          <h3>Horario de la tienda</h3>
-          <dl class="hours">
-            <dt>Lunes a sábado</dt>
-            <dd><time datetime="06:00">6:00 a. m.</time> a <time datetime="18:00">6:00 p. m.</time></dd>
-            <dt>Domingos y festivos</dt>
-            <dd><time datetime="06:00">6:00 a. m.</time> a <time datetime="14:00">2:00 p. m.</time></dd>
-          </dl>
-
+        <!-- ============ Sección: Dónde estamos ============ -->
+        <section>
+          <h2>Dónde estamos</h2>
+          <address>Calle 19 # 26-40, local 2<br>Bogotá, Colombia</address>
+          <p>A una cuadra de la Plaza de Paloquemao.</p>
           <h3>Contacto directo</h3>
-          <ul class="contact-links">
-            <li><a href="tel:+576015550123">Llamar al 601 555 0123</a></li>
-            <li><a href="mailto:pedidos@paloyquemado.co">Escribir a pedidos@paloyquemado.co</a></li>
+          <ul>
+            <li><a href="tel:+576015550123">601 555 0123</a></li>
+            <li><a href="mailto:pedidos@paloyquemado.co">pedidos@paloyquemado.co</a></li>
           </ul>
         </section>
       </div>
 
-      <section class="section">
+      <!-- ============ Sección: Preguntas frecuentes ============ -->
+      <section>
         <h2>Preguntas frecuentes</h2>
-
-        <details class="faq">
-          <summary>¿Hasta qué hora puedo pedir para recibir el mismo día?</summary>
-          <p>
-            Los pedidos confirmados antes de las <time datetime="12:00">12:00 m.</time> se entregan el
-            mismo día. Los que llegan después se despachan al día siguiente en la franja que elijas.
-          </p>
+        <details>
+          <summary>¿Hasta qué hora puedo pedir para hoy?</summary>
+          <p>Los pedidos confirmados antes de las <time datetime="12:00">12:00 m.</time> llegan el mismo día.</p>
         </details>
-
-        <details class="faq">
-          <summary>¿Cuánto cuesta el domicilio y a qué barrios llegan?</summary>
-          <p>
-            El domicilio cuesta $6.000 y es gratis en pedidos desde $60.000. Entregamos en las
-            localidades de Los Mártires, Teusaquillo y Puente Aranda.
-          </p>
+        <details>
+          <summary>¿Cuánto cuesta el domicilio?</summary>
+          <p>Cuesta $6.000 y es <strong>gratis</strong> en pedidos desde $60.000.</p>
         </details>
-
-        <details class="faq">
+        <details>
           <summary>¿Qué medios de pago aceptan?</summary>
-          <p>
-            Efectivo, Nequi, Daviplata y tarjetas débito o crédito con datáfono, tanto en la tienda como
-            en el domicilio. No cobramos recargo por ningún medio de pago.
-          </p>
+          <p>Efectivo, Nequi, Daviplata y tarjeta débito o crédito.</p>
         </details>
-
-        <details class="faq">
+        <details>
           <summary>¿Qué pasa si un producto llega en mal estado?</summary>
-          <p>
-            Avísanos el mismo día por teléfono y te lo cambiamos sin costo en la siguiente entrega, o te
-            devolvemos el valor de ese producto.
-          </p>
-        </details>
-
-        <details class="faq">
-          <summary>¿Puedo apartar productos para recogerlos después?</summary>
-          <p>
-            Sí. Separamos tu pedido hasta por 24 horas. Después de ese tiempo los productos vuelven a la
-            venta para que no pierdan frescura.
-          </p>
+          <p>Avísanos el mismo día y te lo cambiamos sin costo.</p>
         </details>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="site-footer__grid">
-        <div class="site-footer__col">
-          <h2 class="site-footer__title">Palo y Quemado</h2>
-          <p>Verdulería de barrio con fruta y verdura fresca de la Plaza de Paloquemao desde <time datetime="2014">2014</time>.</p>
+    <footer>
+      <div class="columnas">
+        <div>
+          <h2>Visítanos</h2>
+          <address>Calle 19 # 26-40, local 2<br>Bogotá, Colombia</address>
         </div>
-        <div class="site-footer__col">
-          <h2 class="site-footer__title">Contacto</h2>
-          <address>
-            Calle 19 # 26-40, local 2, Bogotá<br>
-            Teléfono: <a href="tel:+576015550123">601 555 0123</a><br>
-            Correo: <a href="mailto:pedidos@paloyquemado.co">pedidos@paloyquemado.co</a>
-          </address>
+        <div>
+          <h2>Contacto</h2>
+          <p><a href="tel:+576015550123">601 555 0123</a></p>
+          <p><a href="mailto:pedidos@paloyquemado.co">pedidos@paloyquemado.co</a></p>
         </div>
-        <div class="site-footer__col">
-          <h2 class="site-footer__title">Horario</h2>
-          <ul class="site-footer__list">
-            <li>Lunes a sábado: <time datetime="06:00">6:00 a. m.</time> a <time datetime="18:00">6:00 p. m.</time></li>
-            <li>Domingos y festivos: <time datetime="06:00">6:00 a. m.</time> a <time datetime="14:00">2:00 p. m.</time></li>
-          </ul>
+        <div>
+          <h2>Horario</h2>
+          <p>Lunes a sábado: <time datetime="06:00">6:00 a. m.</time> a <time datetime="18:00">6:00 p. m.</time></p>
+          <p>Domingos: <time datetime="06:00">6:00 a. m.</time> a <time datetime="14:00">2:00 p. m.</time></p>
         </div>
       </div>
-      <div class="site-footer__bottom">
-        <p>&copy; <time datetime="2026">2026</time> Palo y Quemado. Todos los derechos reservados.</p>
-        <a href="https://github.com/AlejoRjas/">GitHub del autor</a>
-      </div>
+      <p class="derechos">
+        &copy; 2026 Palo y Quemado. Todos los derechos reservados.
+        <a href="https://github.com/AlejoRjas/" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
     </footer>
   </body>
 </html>
